@@ -59,6 +59,15 @@ public class ProductController {
     	});
     	return mapProduits;
     }
+    
+    
+    //Recupère la liste des produits par ordre croissant
+    @GetMapping(value="/OderedProduits")
+    @ApiOperation(value="Recupère les produits ordonnés par nom")
+    public List<Product> trierProduitsParOrdreAlphabetique(){
+    	
+    	return productDao.findAllByOrderByNomAsc();    	
+    }
 
     //Récupérer un produit par son Id
     @ApiOperation(value = "Récupère un produit grâce à son ID à condition que celui-ci soit en stock!")

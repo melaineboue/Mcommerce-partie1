@@ -1,0 +1,45 @@
+{
+	"variables": [],
+	"info": {
+		"name": "TestsPostmanMicroServices",
+		"_postman_id": "a0477f39-5b56-96e7-6c74-3332ab06b59e",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:9090/AdminProduits",
+			"request": {
+				"url": "localhost:9090/AdminProduits",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"id\": 10,\n        \"name\": \"BoueAjout\",\n        \"birthYear\": 1997,\n        \"job\": \"Codeur\"\n    }"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:9090/OrderedProduits",
+			"request": {
+				"url": "localhost:9090/OderedProduits",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": "Produits ordonnés par ordre croissant"
+			},
+			"response": []
+		}
+	]
+}
